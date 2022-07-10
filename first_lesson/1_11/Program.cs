@@ -1,4 +1,8 @@
-﻿Console.WriteLine("Write a namer a: ");
+﻿//1. Напишите программу, которая на вход принимает два
+// числа и проверяет, является ли первое число квадратом
+// второго.
+
+Console.WriteLine("Write a namer a: ");
 string s_a = Console.ReadLine();// пользователь должен ввести целое число a и нажать enter
 Console.WriteLine("Write a namer b: ");
 string s_b = Console.ReadLine();// пользователь должен ввести целое число b и нажать enter
