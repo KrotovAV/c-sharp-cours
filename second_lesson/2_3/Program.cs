@@ -17,7 +17,7 @@ void Multiple(int a, int b)
     if (a % b == 0)
     {
         Console.WriteLine( );
-        Console.WriteLine($"the second number {b} is a multiple of the first namber {a}");
+        Console.WriteLine($"The second number {b} is a multiple of the first namber {a}");
     }
     else 
     {
