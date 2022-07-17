@@ -21,11 +21,5 @@ if(a < 100)
     Console.WriteLine(" ");
     System.Environment.Exit(0);
 }
-if(a >= 1000) 
-{
-    Console.WriteLine("ERROR. The number is not three digit number!");
-    Console.WriteLine(" ");
-    System.Environment.Exit(0);
-}
 
 Console.WriteLine(SecondDigit(a));
