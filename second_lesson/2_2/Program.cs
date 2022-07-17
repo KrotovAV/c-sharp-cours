@@ -24,7 +24,7 @@ int MaxFig(int a)
     return max;
 }
 
-int a = new Random().Next(10, 99);
+int a = new Random().Next(10, 100);
 
 Console.WriteLine(" -------------------- ");
 Console.Write("Random namber = ");
