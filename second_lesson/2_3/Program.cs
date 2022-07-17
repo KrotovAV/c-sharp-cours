@@ -17,13 +17,13 @@ void Multiple(int a, int b)
     if (a % b == 0)
     {
         Console.WriteLine( );
-        Console.WriteLine("the second number is a multiple of the first");
+        Console.WriteLine($"the second number {b} is a multiple of the first namber {a}");
     }
     else 
     {
         Console.WriteLine( );
-        Console.Write("The second number is not a multiple of the first. Remainder = ");
-        Console.WriteLine( a % b);
+        Console.Write($"The second number {b} is not a multiple of the first namber {a}. Remainder = {a % b}");
+        Console.WriteLine( );
     }
 }
 
