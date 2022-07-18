@@ -1,19 +1,16 @@
 ﻿//Задача 3: Напишите программу, которая выводит третью
 //цифру заданного числа или сообщает, что третьей цифры
-//нет.
-
-
-int SecondDigit(int a)
-{
-    return a % 10;
-}
+//нет. 
+// 645 -> 5
+// 78 -> третьей цифры нет
+// 32679 -> 6
 
 Console.WriteLine(" ");
-Console.WriteLine("Write a three digit number ");
+Console.WriteLine("Write a number ");
 string s_a = Console.ReadLine();
 int a = int.Parse(s_a);
 Console.WriteLine("  ");
-Console.WriteLine("---------------------");
+Console.WriteLine("--------------");
 
 if(a < 100) 
 {
@@ -22,4 +19,16 @@ if(a < 100)
     System.Environment.Exit(0);
 }
 
-Console.WriteLine(SecondDigit(a));
+int ThirdDigit(int a)
+{
+    while (a > 999) do
+        {
+        a = (a- a % 10)/10;
+        }
+        while (a > 999);
+
+    return (a % 10);
+}
+
+Console.WriteLine(ThirdDigit(a));
+Console.WriteLine(" ");
