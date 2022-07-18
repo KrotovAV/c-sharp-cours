@@ -21,7 +21,7 @@ if(a < 100)
 
 int ThirdDigit(int a)
 {
-    while (a > 999) do
+        do
         {
         a = (a- a % 10)/10;
         }
