@@ -19,15 +19,15 @@ Console.WriteLine("Write X coordinate point A");
 string s_ax = Console.ReadLine();
 double ax = double.Parse(s_ax);
 
-Console.WriteLine("Write X coordinate point A");
+Console.WriteLine("Write Y coordinate point A");
 string s_ay = Console.ReadLine();
 double ay = double.Parse(s_ay);
 
-Console.WriteLine("Write X coordinate point A");
+Console.WriteLine("Write X coordinate point B");
 string s_bx = Console.ReadLine();
 double bx = double.Parse(s_bx);
 
-Console.WriteLine("Write X coordinate point A");
+Console.WriteLine("Write Y coordinate point B");
 string s_by = Console.ReadLine();
 double by = double.Parse(s_by);
 
