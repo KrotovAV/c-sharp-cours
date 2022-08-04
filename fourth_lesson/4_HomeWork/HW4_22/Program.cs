@@ -4,28 +4,25 @@
 //82 -> 10
 //9012 -> 12
 
+
 Console.WriteLine();
 Console.WriteLine("Write a namber");
 string s_a = Console.ReadLine();
-int l = s_a.Length;
 int a = int.Parse(s_a);
-
-Console.WriteLine("-----------------");
+int[] arr = s_a.Select(i => (int)i-48).ToArray();
 
 int SumDigNum (int a)
 {
+    int l = arr.Length;
     int sum = 0;
-    for (int i = 0; i <= l; i++)
+    for (int i = 0; i < l; i++)
     {
-       int b = a % 10;
-       int c = ( a - b ) / 10;
-       sum = sum + b;
-       a = c;
+        sum = sum + arr[i];
     }
 return sum;
 }
 
+Console.WriteLine("----------------");
 Console.Write("Sum digits of number ");
 Console.WriteLine(SumDigNum (a));
-
 Console.WriteLine();
