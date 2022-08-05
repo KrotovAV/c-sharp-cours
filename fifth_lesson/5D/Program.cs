@@ -1,44 +1,22 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿int[] arr = {1, 2, 3, 5, 6, 5, 3, 2, 1};
 
-void Print(int[] arr)
-{
-    int size = arr.Length;
-
-    for (int i = 0; i < size; i++)
+    int length = arr.Length;
+    int newLength = length/2+length%2;
+    int[] newArr = new int[newLength];
+    Console.WriteLine(length/2);
+    Console.WriteLine("-------");
+    for (int i = 0; i < length/2; i++)
     {
-        Console.Write($"{arr[i]} ");
+        newArr[i]=arr[i]*arr[length-i-1];
+        Console.WriteLine(newArr[i]);
     }
-    Console.WriteLine();
-}
-
-int[] MassNums(int size, int from, int to)
-{   
-    int[] arr = new int[size];
-
-    for (int i = 0; i < size; i++)
-    {
-        arr[i] = new Random().Next(from, to);        
-    }    
-    return arr;
-}
-
-void SumPosNeg(int[] arr)
+if(arr.Length%2>0)
 {
-    int pos, neg;
-    pos = neg = 0;
-
-    for(int i = 0; i < arr.Length; i++)
-    {
-        if(arr[i] >= 0)
-            pos += arr[i];
-        else
-            neg += arr[i];
-    } 
-    Console.WriteLine($"Positive: {pos}, negative: {neg}");    
+    newArr[newLength-1]=arr[(length-1)/2];
+    Console.WriteLine(newArr[newLength-1]);
 }
 
-int[] arr_1 = MassNums(12, -9, 10);
-Print(arr_1);
-SumPosNeg(arr_1);
+//newArr[newLength-1] = arr[(length-1)/2];
+//Console.WriteLine(newArr[newLength-1]);
 
-Console.WriteLine("Hello, World!");
+//Console.WriteLine("Hello, World!");
