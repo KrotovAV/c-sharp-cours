@@ -31,7 +31,7 @@ int FindСheckPositive(int[] arr)
     int check = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if(arr[i]>0)
+        if(arr[i]%2 == 0)
         {
             check = check + 1;
         }
@@ -46,7 +46,7 @@ int n = 10;
 
 //Console.WriteLine("Write namber from");
 //int f = int.Parse(Console.ReadLine());
-int f = -999;
+int f = 0;
 
 //Console.WriteLine("Write namber to");
 //int t = int.Parse(Console.ReadLine());
@@ -65,10 +65,3 @@ Console.Write("Positive namber: ");
 //FindСheckPositive(arr);
 Console.WriteLine(FindСheckPositive(arr));
 Console.WriteLine();
-
-
-
-
-
-
-Console.WriteLine("Hello, World!");
