@@ -1,8 +1,10 @@
-﻿// Задача 2: Задайте одномерный массив, заполненный
-//случайными числами. Найдите сумму элементов, стоящих
-//на нечётных позициях.
-//[3, 7, 23, 12] -> 26
-//[-4, -6, 4, 67] -> 0
+﻿// Задача 3: Задайте массив вещественных чисел. Найдите
+//разницу между максимальным и минимальным
+//элементов массива.
+//[3, 7, 22, 2, 78] -> 76
+
+//Random random = new Random();
+//double value = random.NextDouble(1.23, 5.34);
 
 int[] DialArray(int size, int from, int to)
 {
@@ -24,28 +26,37 @@ void PrintArray(int[] arr)
     Console.WriteLine();
 }
 
-int FindSumOddPos(int[] arr)
+int FindMaxMinDiffer(int[] arr)
 {
-    int sum = 0;
-    for (int i = 0; i < arr.Length; i=i+2)
+    int max = arr[0];
+    int min = arr[0];
+    for (int i = 1; i < arr.Length; i++)
     {
-        sum= sum + arr[i];
+        if(arr[i] > max)
+        {
+            max = arr[i];
+        }
+        if(arr[i] < min)
+        {
+            min = arr[i];
+        }
     }
-    return sum;
+    int diff = max - min;
+    return diff;
 }
 
 Console.WriteLine();
 //Console.WriteLine("Write array size");
 //int n = int.Parse(Console.ReadLine());
-int n = 4;
+int n = 10;
 
 //Console.WriteLine("Write namber from");
 //int f = int.Parse(Console.ReadLine());
-int f = -10;
+int f = -20;
 
 //Console.WriteLine("Write namber to");
 //int t = int.Parse(Console.ReadLine());
-int t = 10;
+int t = 20;
 
 Console.WriteLine("----------------");
 DialArray(n, f, t);
@@ -56,7 +67,7 @@ Console.Write("Array : ");
 PrintArray(arr);
 
 Console.WriteLine("----------------");
-Console.Write("Sum of nambers in odd position: ");
-//FindSumOddNam(arr);
-Console.WriteLine(FindSumOddPos(arr));
+Console.Write("Differ max min: ");
+
+Console.WriteLine(FindMaxMinDiffer(arr));
 Console.WriteLine();
