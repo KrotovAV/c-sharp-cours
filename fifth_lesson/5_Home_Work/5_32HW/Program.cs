@@ -3,9 +3,6 @@
 //элементов массива.
 //[3, 7, 22, 2, 78] -> 76
 
-//Random random = new Random();
-//double value = random.NextDouble(1.23, 5.34);
-
 double[] DialArray(int size, int from, int to)
 {
     double[] arr = new double[size];
