@@ -11,8 +11,7 @@ double[] DialArray(int size, int from, int to)
     double[] arr = new double[size];
     for (int i = 0; i < size; i++)
     {
-        Random x = new Random();
-        arr[i] = Convert.ToDouble(x.Next( from , to )/100.0);
+        arr[i] = Convert.ToDouble(new Random().Next(from, to+1)/100.0);
         //Console.WriteLine(arr[i]);
     }
     return arr;
