@@ -3,14 +3,15 @@
 //M = 1; N = 5 -> "2, 4"
 //M = 4; N = 8 -> "4, 6, 8"
 
-int n = 4; 
-int m = 8;
+int n = 3;
+int m = 15;
 
 void WriteFrTo(int fr, int to)
 {
-if(fr == to+1) return;
-WriteFrTo(fr, to - 1);
-if(to%2 == 0) Console.Write($"{to}, ");
+    if (to < fr) return;
+    WriteFrTo(fr, to - 1);
+    if (to % 2 == 0)
+        Console.Write($"{to}, ");        
 }
 Console.WriteLine();
 
@@ -18,4 +19,3 @@ WriteFrTo(n, m);
 
 Console.WriteLine();
 Console.WriteLine();
-

@@ -5,14 +5,11 @@
 
 int n = 1; 
 int m = 15;
-int s =0;
 
 int SumFrTo(int fr, int to)
 {
 if(fr == to+1) return 0;
-s = to;
-s = s + SumFrTo(fr, to - 1);
-return s;
+return to + SumFrTo(fr, to - 1);
 }
 Console.WriteLine();
 
